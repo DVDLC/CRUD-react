@@ -8,12 +8,12 @@ function App() {
   const baseUrl = 'https://users-crud1.herokuapp.com/users/',
     [ isModalOpen, setIsModalOpen ] = useState( false ),
     [ usersData, setUsersData ] = useState([]),
-    [ userToUpdate, setUserToUpdate ] = useState({}) 
+    [ userToUpdate, setUserToUpdate ] = useState( null ) 
 
 
   const reloadPage = () => {
     axios.get( baseUrl )
-    .then( res => setUsersData( res?.data ) )
+    .then( res => setUsersData( res.data ) )
   }
   
   useEffect(() => {

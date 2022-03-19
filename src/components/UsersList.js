@@ -2,7 +2,6 @@
 
 function UsersList( { setIsModalOpen, usersData, setUserToUpdate, remove } ) {
 
-  console.log( usersData )
   return (
       <section className='section-container' >
         <button

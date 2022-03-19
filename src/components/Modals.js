@@ -9,7 +9,6 @@ function Modals( { isModalOpen, setIsModalOpen, userToUpdate, setUserToUpdate, a
         [ password, setPassword ] = useState( '' ),
         [ birthday, setBirthday ] = useState( '' )
 
-    console.log( lastName )
     useEffect(() => {
         if( userToUpdate ){
             setFirstName( userToUpdate.first_name )
@@ -25,6 +24,8 @@ function Modals( { isModalOpen, setIsModalOpen, userToUpdate, setUserToUpdate, a
             setEmail( '' )
             setPassword( '' )
             setBirthday( '' )
+
+            setIsModalOpen( false )
         }
 
     },[ userToUpdate, setIsModalOpen ])
