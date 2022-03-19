@@ -1,38 +1,198 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.section-container{
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.new-usr-btn{
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  width: 150px;
+  padding: 0.5rem;
+  border: none;
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  color: #fff;
+  background-color: #72cbf1;
+  border-radius: 5px;
+  transition: all 300ms;
+}
+
+.new-usr-btn:hover{
+  cursor: pointer;
+  background-color: #409dc4;
+}
+
+.users-card-container{
+  width: 70%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-top: 6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.users-card-container > .user-card{
+  width: 395px;
+  padding: 1rem;
+  height: 250px;
+  margin: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Helvetica Neue';
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-card h3{
+  font-size: 16px;
+}
+
+.user-card hr{
+  border: 1px thin #ccc;
+}
+
+.user-card h4{
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.user-card p{
+  font-size: 14px;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-container button{
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+}
+
+.user-card button i { 
+  font-size: 20px;
+}
+
+.user-card .btn-remove{ 
+  background-color: #d34240;
+  margin-right: 12.5px;
+  color: #fff;
+}
+
+.user-card .btn-update{ 
+  color: #555;
+}
+
+.user-card .btn-remove, 
+.btn-update:hover{ 
+    cursor: pointer;
+}
+
+
+/* -- Modal Form -- */
+.modal{
+  min-width: 100%;
+  min-height: 100vh;
+  background:rgba(0,0,0,.75);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.is-open{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container {
+  background-color: #fff;
+  margin-top: 2.5rem; 
+  border-radius: 3px;
+  position: relative;
+  font-family: 'Helvetica Neue';
+  width: 420px;
+  height: 440px;
+}
+
+.modal-container > button{
+  position: absolute;
+  right: 35px;
+  top: 30px;
+  background-color: transparent;
+  border: none;
+  color: #d34240;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.modal-container > button:hover{
+  cursor: pointer;
+  color: #c63637;
+}
+
+.modal-container form{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-container  h2{
+  width: 90%;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.modal-container  div{
+  display: flex;
+  width: 90%;
+}
+
+.modal-container div .last-input{
+  width: 75%;
+  margin-left: .25rem;
+}
+
+.modal-container input{
+  padding: .75rem;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 7px;
+  width: 90%;
+}
+
+.modal-container .submit-btn{
+  padding: .75rem;
+  border: none;
+  border-radius: 7px;
+  width: 90%;
+  background-color: #72cbf1;
+  font-weight: bold;
+  color: #fff;
+  transition: all 300ms;
+}
+
+.modal-container .submit-btn:hover{
+  cursor: pointer;
+  background-color: #409dc4;
 }
